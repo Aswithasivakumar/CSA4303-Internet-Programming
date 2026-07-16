@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Welcome to My Website</title>
+<style>
+body{margin:0;font-family:Cambria;background:linear-gradient(#dff6ff,#bfe7ff);text-align:center;font-size:14px;overflow-x:hidden}
+.b{position:fixed;border-radius:50%;background:rgba(255,255,255,.35);animation:f 18s linear infinite}
+.b:nth-child(1){width:60px;height:60px;left:10%;top:90%}.b:nth-child(2){width:40px;height:40px;left:70%;top:95%;animation-duration:22s}.b:nth-child(3){width:80px;height:80px;left:40%;top:100%;animation-duration:26s}
+@keyframes f{to{transform:translateY(-120vh)}}
+.banner{background:#0066ff;color:#fff;overflow:hidden;white-space:nowrap;padding:10px}
+.scroll{display:inline-block;padding-left:100%;animation:s 12s linear infinite}@keyframes s{to{transform:translateX(-120%)}}
+.hero{width:80%;margin:30px auto;padding:25px;border-radius:18px;background:rgba(255,255,255,.35);backdrop-filter:blur(10px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.type{display:inline-block;border-right:3px solid blue;overflow:hidden;white-space:nowrap;width:0;animation:t 4s steps(22,end) forwards,blink .8s infinite}
+@keyframes t{to{width:22ch}}@keyframes blink{50%{border-color:transparent}}
+button{background:#0066ff;color:#fff;border:none;padding:12px 24px;border-radius:8px}
+.stats,.grid,.skills,.gallery{display:grid;gap:18px;justify-content:center;margin:25px}
+.stats{grid-template-columns:repeat(auto-fit,minmax(120px,150px))}
+.grid{grid-template-columns:repeat(auto-fit,minmax(180px,220px))}
+.card,.stat,.skill{background:#fff;border-radius:12px;padding:16px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.bar{height:10px;background:#d9ecff;border-radius:20px}.fill{height:10px;background:#0066ff;border-radius:20px}
+.gallery{grid-template-columns:repeat(auto-fit,200px)}
+.gallery img{width:200px;height:140px;object-fit:cover;border-radius:10px}
+.quote{margin:25px auto;width:80%;background:#0066ff;color:#fff;padding:18px;border-radius:14px}
+.wave{height:80px;background:linear-gradient(180deg,transparent 40%,#0066ff 40%)}
+footer{background:#0066ff;color:#fff;padding:16px}
+</style></head><body>
+<div class=b></div><div class=b></div><div class=b></div>
+<div class=banner><div class=scroll>🌐 Welcome • HTML • CSS • Grid • Creativity • Responsive Design •</div></div>
+<div class=hero><h1 class=type>Welcome to My Website</h1><p>Modern HTML & CSS assignment with unique elements.</p><button>Explore More</button></div>
+<div class=stats><div class=stat><h2>10+</h2>Projects</div><div class=stat><h2>100%</h2>HTML & CSS</div><div class=stat><h2>24/7</h2>Learning</div><div class=stat><h2>★</h2>Creative</div></div>
+<h2>Features</h2>
+<div class=grid><div class=card>🏠 Home</div><div class=card>💻 HTML</div><div class=card>🎨 CSS</div><div class=card>📱 Responsive</div><div class=card>🖼 Gallery</div><div class=card>📞 Contact</div></div>
+<h2>Skills</h2>
+<div class=skills>
+<div class=skill>HTML<div class=bar><div class=fill style="width:95%"></div></div></div>
+<div class=skill>CSS<div class=bar><div class=fill style="width:90%"></div></div></div>
+<div class=skill>Design<div class=bar><div class=fill style="width:85%"></div></div></div>
+</div>
+<h2>Gallery</h2>
+<div class=gallery>
+<img src="https://picsum.photos/200/140?1"><img src="https://picsum.photos/200/140?2"><img src="https://picsum.photos/200/140?3">
+</div>
+<div class=quote>"Every great website begins with a single line of HTML."</div>
+<div class=wave></div><footer>Designed using HTML & CSS | Welcome to My Website © 2026</footer>
+</body></html>
