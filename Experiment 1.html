@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Management System</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+}
+
+header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#1565c0;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+height:350px;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:12px 30px;
+border:none;
+background:orange;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero button:hover{
+background:red;
+color:white;
+}
+
+.search{
+padding:40px;
+text-align:center;
+background:white;
+}
+
+.search input{
+width:60%;
+padding:12px;
+font-size:18px;
+}
+
+.search button{
+padding:12px 20px;
+background:#0d47a1;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.section-title{
+text-align:center;
+margin:40px;
+font-size:35px;
+color:#0d47a1;
+}
+
+.services{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#0d47a1;
+margin-bottom:10px;
+}
+
+.books{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
+}
+
+.book{
+width:220px;
+background:white;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+padding:15px;
+text-align:center;
+}
+
+.book img{
+width:100%;
+height:250px;
+border-radius:10px;
+}
+
+.book button{
+margin-top:10px;
+padding:10px;
+background:#1565c0;
+color:white;
+border:none;
+cursor:pointer;
+width:100%;
+}
+
+.about{
+padding:40px;
+background:white;
+text-align:center;
+line-height:30px;
+}
+
+.login{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:30px;
+}
+
+.login button{
+padding:15px 35px;
+font-size:18px;
+background:#0d47a1;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.contact{
+padding:40px;
+background:#e3f2fd;
+text-align:center;
+}
+
+.contact input,.contact textarea{
+width:60%;
+padding:12px;
+margin:10px;
+font-size:16px;
+}
+
+.contact button{
+padding:12px 25px;
+background:#0d47a1;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>📚 Library Management System</h1>
+<p>Knowledge is Power</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Books</a>
+<a href="#">Materials</a>
+<a href="#">Student</a>
+<a href="#">Admin</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+<h1>Welcome to Our Library</h1>
+<p>Search, Borrow and Manage Books Easily</p>
+<button onclick="welcome()">Explore Books</button>
+</div>
+
+<div class="search">
+<h2>Search Books</h2><br>
+
+<input type="text" id="book" placeholder="Enter Book Name">
+
+<button onclick="searchBook()">Search</button>
+
+</div>
+
+<h2 class="section-title">Library Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>📖 Search Books</h3>
+<p>Find books instantly.</p>
+</div>
+
+<div class="card">
+<h3>📚 Borrow Books</h3>
+<p>Borrow books online.</p>
+</div>
+
+<div class="card">
+<h3>💰 Check Fine</h3>
+<p>View pending fine.</p>
+</div>
+
+<div class="card">
+<h3>📄 Study Materials</h3>
+<p>Download Semester Materials.</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Featured Books</h2>
+
+<div class="books">
+
+<div class="book">
+<img src="https://covers.openlibrary.org/b/id/8231996-L.jpg">
+<h3>Java Programming</h3>
+<p>Author : Herbert Schildt</p>
+<button>View Details</button>
+</div>
+
+<div class="book">
+<img src="https://covers.openlibrary.org/b/id/8091016-L.jpg">
+<h3>Python</h3>
+<p>Author : Mark Lutz</p>
+<button>View Details</button>
+</div>
+
+<div class="book">
+<img src="https://covers.openlibrary.org/b/id/11153278-L.jpg">
+<h3>Database Management</h3>
+<p>Author : Korth</p>
+<button>View Details</button>
+</div>
+
+<div class="book">
+<img src="https://covers.openlibrary.org/b/id/9259256-L.jpg">
+<h3>HTML & CSS</h3>
+<p>Author : Jon Duckett</p>
+<button>View Details</button>
+</div>
+
+</div>
+
+<h2 class="section-title">Login</h2>
+
+<div class="login">
+
+<button onclick="student()">Student Login</button>
+
+<button onclick="admin()">Admin Login</button>
+
+</div>
+
+<div class="about">
+
+<h2>About Library</h2><br>
+
+<p>
+
+The Library Management System helps students and librarians manage books efficiently.
+Students can search books, borrow books, check fines, download study materials,
+and view borrowing history.
+The librarian can add, update, delete books, issue books, return books,
+manage fines and upload study materials.
+
+</p>
+
+</div>
+
+<div class="contact">
+
+<h2>Contact Us</h2><br>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Email"><br>
+
+<textarea rows="5" placeholder="Your Message"></textarea><br>
+
+<button onclick="message()">Send Message</button>
+
+</div>
+
+<footer>
+
+<h3>Library Management System</h3>
+
+<p>Email : library@gmail.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>© 2026 All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function welcome(){
+alert("Welcome to Library Management System");
+}
+
+function searchBook(){
+
+var book=document.getElementById("book").value;
+
+if(book=="")
+alert("Please Enter Book Name");
+
+else
+alert(book+" Book Found Successfully.");
+
+}
+
+function student(){
+alert("Student Login Page");
+}
+
+function admin(){
+alert("Admin Login Page");
+}
+
+function message(){
+alert("Thank You! Your message has been sent.");
+}
+
+</script>
+
+</body>
+</html>
