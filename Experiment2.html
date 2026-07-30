@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Booking System</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#003366;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#0059b3;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px auto;
+width:80%;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+
+button{
+background:#003366;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:green;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table,th,td{
+border:1px solid black;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+}
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🏨 Hotel Booking Management System</h1>
+<p>Book Your Dream Stay</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Rooms</a>
+<a href="#">Booking</a>
+<a href="#">Contact</a>
+</nav>
+
+<section>
+
+<div class="card">
+<h2>User Registration</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+</div>
+
+<div class="card">
+
+<h2>Book a Room</h2>
+
+<label>Check In</label>
+
+<input type="date">
+
+<label>Check Out</label>
+
+<input type="date">
+
+<label>Room Type</label>
+
+<select>
+
+<option>Standard Room</option>
+
+<option>Deluxe Room</option>
+
+<option>Executive Room</option>
+
+<option>Suite Room</option>
+
+</select>
+
+<button onclick="book()">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<h2>Booking History</h2>
+
+<table>
+
+<tr>
+
+<th>Booking ID</th>
+
+<th>Room</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>101</td>
+
+<td>Deluxe Room</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr>
+
+<td>102</td>
+
+<td>Suite Room</td>
+
+<td>Cancelled</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Admin Panel</h2>
+
+<p>Total Rooms : 100</p>
+
+<p>Available Rooms : 45</p>
+
+<p>Booked Rooms : 55</p>
+
+<button onclick="admin()">Manage Rooms</button>
+
+</div>
+
+<div class="card">
+
+<h2>About Us</h2>
+
+<p>
+Our hotel provides comfortable rooms, excellent customer service,
+24×7 support, free Wi-Fi, delicious food, and easy online booking.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Contact Us</h2>
+
+<p>📞 +91 9876543210</p>
+
+<p>📧 hotel@gmail.com</p>
+
+<p>📍 Chennai, Tamil Nadu</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Hotel Booking Management System
+
+</footer>
+
+<script>
+
+function register(){
+alert("Registration Successful!");
+}
+
+function book(){
+alert("Room Booked Successfully!");
+}
+
+function admin(){
+alert("Admin Panel Opened!");
+}
+
+</script>
+
+</body>
+</html>
