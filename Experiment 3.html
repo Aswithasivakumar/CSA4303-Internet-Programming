@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Bus Booking</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#003366;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#0059b3;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+background:#2196F3;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+.container{
+width:85%;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#003366;
+color:white;
+padding:12px;
+border:none;
+width:100%;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:green;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table,th,td{
+border:1px solid #ddd;
+}
+
+th{
+background:#003366;
+color:white;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+}
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+.container{
+width:95%;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🚌 Online Bus Booking System</h1>
+<p>Travel Smart • Book Online</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Book Ticket</a>
+<a href="#">Routes</a>
+<a href="#">Offers</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+<h1>Book Your Bus Ticket Online</h1>
+<p>Easy • Fast • Secure</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Search Bus</h2>
+
+<label>From</label>
+<input type="text" placeholder="Enter Source">
+
+<label>To</label>
+<input type="text" placeholder="Enter Destination">
+
+<label>Journey Date</label>
+<input type="date">
+
+<label>Bus Type</label>
+
+<select>
+<option>AC Sleeper</option>
+<option>Non AC Sleeper</option>
+<option>AC Seater</option>
+<option>Non AC Seater</option>
+</select>
+
+<button onclick="searchBus()">Search Bus</button>
+
+</div>
+
+<div class="card">
+
+<h2>Passenger Details</h2>
+
+<input type="text" placeholder="Passenger Name">
+
+<input type="number" placeholder="Age">
+
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<input type="text" placeholder="Mobile Number">
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+</div>
+
+<div class="card">
+
+<h2>Available Buses</h2>
+
+<table>
+
+<tr>
+<th>Bus Name</th>
+<th>Route</th>
+<th>Departure</th>
+<th>Fare</th>
+</tr>
+
+<tr>
+<td>Express Travels</td>
+<td>Chennai → Madurai</td>
+<td>09:00 PM</td>
+<td>₹750</td>
+</tr>
+
+<tr>
+<td>Royal Travels</td>
+<td>Chennai → Coimbatore</td>
+<td>10:30 PM</td>
+<td>₹900</td>
+</tr>
+
+<tr>
+<td>Green Line</td>
+<td>Chennai → Trichy</td>
+<td>08:00 PM</td>
+<td>₹650</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Why Choose Us?</h2>
+
+<ul>
+<li>✔ Easy Online Booking</li>
+<li>✔ Secure Payment</li>
+<li>✔ Live Bus Availability</li>
+<li>✔ Instant Ticket Confirmation</li>
+<li>✔ 24×7 Customer Support</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Contact Us</h2>
+
+<p>📍 Chennai, Tamil Nadu</p>
+<p>📞 +91 9876543210</p>
+<p>📧 support@onlinebus.com</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Online Bus Booking System</p>
+
+</footer>
+
+<script>
+
+function searchBus(){
+alert("Bus Search Successful!");
+}
+
+function bookTicket(){
+alert("Your Bus Ticket has been Booked Successfully!");
+}
+
+</script>
+
+</body>
+</html>
